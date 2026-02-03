@@ -6,7 +6,7 @@ class UserProfile(initialName: String, initialEmail: String){
     var name: String by Delegates.observable(initialName) {_, old, new -> println("Name changed: $old -> $new") }
     var email: String by Delegates.observable(initialEmail) {_, old, new -> println("Email changed: $old -> $new") }
     val avatar: String by lazy {
-        println("Загружаем аватар для $name...")
+        println("Downloading avatar for $name...")
         "avatar_of_$name.png"
     }
 }
